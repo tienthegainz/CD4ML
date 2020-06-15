@@ -3,12 +3,13 @@ import random
 param_choices = list(range(0, 20))
 
 
-class DummyModel1():
+class DummyModel2():
     def __init__(self, config):
         self.config = config
         self.params = {
-            "layer1": random.sample(param_choices, 4),
-            "layer2": random.sample(param_choices, 4)
+            "layer1": random.sample(param_choices, 5),
+            "layer2": random.sample(param_choices, 5),
+            "layer3": random.sample(param_choices, 5)
         }
         print('Dummy 1 with params: ', self.params)
 
@@ -18,4 +19,4 @@ class DummyModel1():
 
 
 def model_builder(config, retrain=False, path=None):
-    return DummyModel1(config)
+    return DummyModel2(config)

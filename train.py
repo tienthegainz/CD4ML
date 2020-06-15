@@ -44,13 +44,13 @@ def main():
             if val_loss < best_loss:
                 best_loss = val_loss
                 # TODO:Save model here
-                save_model('DummyModel1.pkl', m.params)
+                save_model('DummyModel2.pkl', m.params)
         # Save artifacts
-        mlflow.log_artifact('DummyModel1.pkl', 'weight')
+        mlflow.log_artifact('DummyModel2.pkl', 'weight')
         mlflow.log_artifacts('dataset_builder', 'code/dataset')
         mlflow.log_artifacts('model_builder', 'code/model')
         mlflow.log_artifacts('config', 'code/config')
-        os.remove('DummyModel1.pkl')
+        os.remove('DummyModel2.pkl')
 
 
 if __name__ == "__main__":
