@@ -1,0 +1,9 @@
+name: dummy-model1
+
+docker_env:
+  image: dummy-model
+
+entry_points:
+  main:
+    command: |
+          python train.py
